@@ -29,6 +29,10 @@ header{
  width:1170px;
 }
 
+.container p{
+ font-size:20px; 
+}
+
 
 .message-content {
   background-image: url("../background.jpg");
