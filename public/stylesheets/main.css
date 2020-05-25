@@ -1,3 +1,23 @@
+ul {
+  list-style: none;
+}
+
+header{
+  background:black;
+  height:50px
+}
+
+.menu-left{
+  float:left;
+  heigth:50px;
+  font-size:30px;
+}
+
+.menu-right{
+  float:right;
+  heigth:50px;
+}
+
 .message-content {
   background: #008080;
   color: white;
