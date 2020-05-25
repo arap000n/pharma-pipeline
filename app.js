@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
-  res.render('/public/top.ejs');
+  res.render('public/top.ejs');
 });
 
 express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
