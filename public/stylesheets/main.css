@@ -5,21 +5,9 @@
   text-align:center;
 }
 
-.navbar + .message-content {
-    margin-top: -20px;
-}
-
-.message-content .logo {
-    display: block;
-    background: #008080;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 80px;
-    height: 80px;
-    margin: auto;
-    border: 2px solid white;
-}
-
-.jumbotron .lang-logo img {
-      max-width: 100%;
+.news-content {
+  background: white;
+  color: #008080;
+  padding:80px 0px;
+  text-align:center;
 }
