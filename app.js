@@ -8,4 +8,4 @@ app.get('/', (req, res) => {
   res.render('top.ejs');
 });
 
-const port = process.env.PORT || 8000;
+app.listen(3000);
