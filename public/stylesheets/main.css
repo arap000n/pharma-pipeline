@@ -3,19 +3,24 @@ ul {
 }
 
 header{
-  background:black;
+  background-color:black;
   height:50px
 }
 
 .menu-left{
   float:left;
+  background-color:#696969;
+  color:black;
   heigth:50px;
   font-size:30px;
 }
 
 .menu-right{
   float:right;
+  background-color:#696969;
+  color:black;
   heigth:50px;
+  font-size:30px;
 }
 
 .message-content {
