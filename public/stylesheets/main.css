@@ -1,7 +1,7 @@
 .message-content {
   background: #008080;
   color: white;
-  padding-bottom: 80px;
+  padding:150px 0px 80px 0px;
   text-align:center;
   height:400px;
   vertical-align:middle;
@@ -26,6 +26,7 @@
 .search{
  width:200px;
  height:40px;
+ padding:50px 0px 0px 0px
  border-radius:50px;
 }
 
