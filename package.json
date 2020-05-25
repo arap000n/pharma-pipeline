@@ -2,7 +2,7 @@
   "name": "nodejs_lesson",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "https://github.com/arap000n/pharma-pipeline.git/app.js",
   "scripts": {
     "start": "node app.js"
   },
