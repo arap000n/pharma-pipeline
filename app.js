@@ -7,3 +7,5 @@ app.use(express.urlencoded({extended: false}));
 app.get('/', (req, res) => {
   res.render('top.ejs');
 });
+
+const port = process.env.PORT || 8000;
