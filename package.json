@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -r app.js"
+    "start": "node app.js"
   },
   "author": "Progate",
   "license": "ISC",
@@ -15,5 +15,9 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/pharma-pipeline"
   }
 }
