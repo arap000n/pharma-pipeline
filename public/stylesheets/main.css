@@ -1,35 +1,20 @@
-.jumbotron {
+.message-content {
   background: #008080;
   color: white;
   padding-bottom: 80px;
 }
 
-.jumbotron .btn-primary {
-    background: #008080;
-    border-color: white;
-}
-
-.jumbotron .btn-primary:hover{
-      background: #008080;
-}
-
-.jumbotron p {
-    color: white;
-    max-width: 75%;
-    margin: 1em auto 2em;
-}
-
-.navbar + .jumbotron {
+.navbar + .message-content {
     margin-top: -20px;
 }
 
-.jumbotron .lang-logo {
+.message-content .logo {
     display: block;
     background: #008080;
     border-radius: 50%;
     overflow: hidden;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: auto;
     border: 2px solid white;
 }
