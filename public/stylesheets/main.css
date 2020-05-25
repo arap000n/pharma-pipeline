@@ -2,6 +2,7 @@
   background: #008080;
   color: white;
   padding-bottom: 80px;
+  text-align:center;
 }
 
 .navbar + .message-content {
