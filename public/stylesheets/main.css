@@ -3,6 +3,7 @@
   color: white;
   padding-bottom: 80px;
   text-align:center;
+  height:400px;
 }
 
 .news-content {
@@ -10,4 +11,14 @@
   color: #008080;
   padding:80px 0px;
   text-align:center;
+  height:400px;
 }
+
+.pipeline-content {
+  background: #008080;
+  color: white;
+  padding:80px 0px;
+  text-align:center;
+  height:1000px;
+}
+
