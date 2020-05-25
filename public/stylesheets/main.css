@@ -37,7 +37,7 @@ header{
 }
 
 .message-title{
-  padding-top:40px;
+  padding-top:100px;
 }
 
 .news-content {
@@ -57,10 +57,10 @@ header{
 }
 
 .search{
- width:200px;
+ width:300px;
  height:40px;
  padding:50px 0px 0px 0px
- border-radius:10px;
+ border-radius:15px;
 }
 
 .search-btn{
