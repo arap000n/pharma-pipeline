@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
-app.get('https://pharma-pipeline.herokuapp.com/', (req, res) => {
+app.get('/', (req, res) => {
   res.render('top.ejs');
 });
 
