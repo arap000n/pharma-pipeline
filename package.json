@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -r './.module' ./app.js"
+    "start": "nodemon -r './.module' app.js"
   },
   "author": "Progate",
   "license": "ISC",
