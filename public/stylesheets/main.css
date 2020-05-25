@@ -2,7 +2,7 @@ ul {
   list-style: none;
 }
 
-.header{
+header{
   background-color:rgba(0,0,0,0.7);
   height:50px;
   position:fixed;
