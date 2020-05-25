@@ -37,7 +37,7 @@ header{
 }
 
 .message-title{
-  padding-top:100px;
+  margin-top:200px;
 }
 
 .news-content {
@@ -67,5 +67,5 @@ header{
   color:rgb(105,105,105);
   padding:5px 10px; 
   font-weight:bold;
-  border:1px solid white;
+  border:1px solid rgb(105,105,105);
 }
