@@ -32,6 +32,7 @@ header{
   text-align:center;
   height:600px;
   vertical-align:middle;
+  border-bottom:1px solid rgb(105,105,105); 
 }
 
 .news-content {
