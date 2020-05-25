@@ -9,10 +9,11 @@ ul {
   z-index:10;
 }
 
-.header .container{
-  width:1170px; 
+.container{
+ width:1170px;
   margin:auto;
 }
+
 
 .message-content {
   background-image: url("../background.jpg");
@@ -25,8 +26,7 @@ ul {
   vertical-align:middle;
   border-top:1px solid rgb(105,105,105); 
   border-bottom:1px solid rgb(105,105,105);
-  width:1170px;
-  margin:auto;
+
 }
 
 .message-title{
@@ -39,8 +39,7 @@ ul {
   padding:80px 0px;
   text-align:center;
   height:600px;
-  width:1170px;
-  margin:auto;
+
 }
 
 .pipeline-content {
@@ -49,8 +48,7 @@ ul {
   padding:80px 0px;
   text-align:center;
   height:1000px;
-  width:1170px;
-  margin:auto;
+
 }
 
 .search{
