@@ -19,10 +19,21 @@ a {
 
 header{
   background-color:rgba(0,0,0,0.7);
-  height:50px;
+  height:90px;
   width:100%;  
   position:fixed;
   z-index:10;
+}
+
+.header-logo {
+  float: left;
+  font-size: 36px;
+  padding: 20px 40px;
+}
+
+.header-list li {
+  float: left;
+  padding: 33px 20px;
 }
 
 .container{
