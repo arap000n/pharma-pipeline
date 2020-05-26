@@ -28,11 +28,13 @@ header{
 .header-logo {
   float: left;
   font-size: 36px;
+  color:white;
   padding: 20px 40px;
 }
 
 .header-list li {
   float: left;
+  color:white;
   padding: 33px 20px;
 }
 
