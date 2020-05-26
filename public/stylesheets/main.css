@@ -38,7 +38,7 @@ header{
 .message-content {
   background-image: url("../background.jpg");
   background-size:cover;
-  color:rgb(105,105,105);
+  color:black;
   opacity:0.8;
   padding:50px 50px 80px 50px;
   text-align:center;
