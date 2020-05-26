@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   connection.query(
     'SELECT * FROM drug',
     (error, results) => {
-      res.render('pages/index',{drug: results});
+      res.render('pages/index',{drugs: results});
     }
 })
 
