@@ -81,13 +81,13 @@ header{
 .search{
  width:300px;
  height:40px;
- padding:0px 0px 0px 0px
+ margin:50px 0px 0px 0px;
  border-radius:15px;
 }
 
 .search-btn{
   color:rgb(105,105,105);
-  padding:50px 10px; 
+  padding:5px 10px; 
   font-weight:bold;
   border:1px solid rgb(105,105,105);
 }
