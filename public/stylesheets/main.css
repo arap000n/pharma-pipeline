@@ -65,6 +65,8 @@ header{
 
 .section-title{
   text-align:center;
+  margin:auto;
+  padding-bottom:10px;
 }
 
 .news-display{
