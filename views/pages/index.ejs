@@ -36,6 +36,12 @@
 <div class="pipeline-content" id="p">
   <div class="container">
     <h2 class="section-title">開発パイプライン情報</h2>
+       <% drugs.forEach((drug) => { %>
+          <div>
+            <span class="id-column"><%= drug.pipeline_id %></span>
+            <span class="name-column"><%= drug.drug_id %></span>
+          </div>
+       <% }) %>
   </div>
 </div>
 
