@@ -36,12 +36,32 @@
 <div class="pipeline-content" id="p">
   <div class="container">
     <h2 class="section-title">開発パイプライン情報</h2>
+    <table class="tablesorter">
+      <thead>
+        <tr>
+          <th>会社名</th>
+          <th>開発コード</th>
+          <th>一般名</th>
+          <th>製品名</th>
+          <th>対象疾患</th>
+          <th>作用機序</th>
+          <th>フェーズ</th>
+        </tr>
+      </thead>
+      <tbody>
        <% pipelines.forEach((pipeline) => { %>
           <div>
-            <p><%= pipeline.pipeline_id %></p>
-            <p><%= pipeline.drug_id %></p>
+            <td><%= pipeline.pipeline_id %></td>
+            <td><%= pipeline.drug_id %></td>
+            <td>dummy</td>
+            <td>dummy</td>
+            <td>dummy</td>
+            <td>dummy</td>
+            <td>dummy</td>
           </div>
        <% }) %>
+      </tbody>
+     </table>
   </div>
 </div>
 
