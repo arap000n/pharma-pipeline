@@ -26,8 +26,7 @@ header{
 }
 
 .container{
- width:1170px;
-  margin:auto;
+  margin:50px 50px;
   text-align:center;
 }
 
@@ -56,7 +55,7 @@ header{
 }
 
 .news-content {
-  background: white;
+  background-color: white;
   color: #008080;
   padding:50px 50px 80px 50px;
   text-align:center;
@@ -71,7 +70,7 @@ header{
 }
 
 .pipeline-content {
-  background: #008080;
+  background-color: #008080;
   color: white;
   padding:50px 50px 80px 50px;
   text-align:center;
@@ -82,7 +81,7 @@ header{
 .search{
  width:300px;
  height:40px;
- padding:50px 0px 0px 0px
+ padding:100px 0px 0px 0px
  border-radius:15px;
 }
 
