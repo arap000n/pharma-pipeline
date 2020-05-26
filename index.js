@@ -16,9 +16,9 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
     connection.query(
-      'SELECT * FROM drug',
+      'SELECT * FROM pipeline',
       (error, results) => {
-        res.render('pages/index',{drugs: results});
+        res.render('pages/index',{pipelines: results});
       })
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
