@@ -1,12 +1,13 @@
-const app = require('express')
+const express = require('express')
 const path = require('path')
 const mysql = require('mysql');
 const PORT = process.env.PORT || 5000
 
 
-app.use(app.static(path.join(__dirname, 'public')))
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
 
 const connection = mysql.createConnection({
   host: "us-cdbr-east-05.cleardb.net",
@@ -15,7 +16,7 @@ const connection = mysql.createConnection({
   database: "heroku_0edb62883326224"
 });
 
-app.get('/', (req, res) => {
+express.get('/', (req, res) => {
   connection.query(
     'SELECT * FROM drug',
     (error, results) => {
@@ -23,4 +24,4 @@ app.get('/', (req, res) => {
     })
 })
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
