@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
   database: "heroku_0edb62883326224"
 });
 
-express.get('/', (req, res) => {
+express().get('/', (req, res) => {
   connection.query(
     'SELECT * FROM drug',
     (error, results) => {
