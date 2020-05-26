@@ -142,9 +142,11 @@ header{
 .tablesorter{
   margin:auto;
   text-align:center;
+  table-layout: fixed;
 }
 
 .th .td{
   width:100px;
   height:50px;
+  border-bottom: 1px white solid;
 }
