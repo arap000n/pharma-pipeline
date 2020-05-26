@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
+const mysql = require('mysql');
 const PORT = process.env.PORT || 5000
+
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
