@@ -51,13 +51,13 @@
       <tbody>
        <% pipelines.forEach((pipeline) => { %>
           <tr>
-            <td><%= pipeline.company.company_name %></td>
-            <td><%= pipeline.drug.dev_code %></td>
-            <td><%= pipeline.drug.generic_name %></td>
-            <td><%= pipeline.drug.drug_name %></td>
-            <td><%= pipeline.pipeline.indication %></td>
-            <td><%= pipeline.drug.mechanism %></td>
-            <td><%= pipeline.pipeline.phase %></td>
+            <td><%= pipeline.company_name %></td>
+            <td><%= pipeline.dev_code %></td>
+            <td><%= pipeline.generic_name %></td>
+            <td><%= pipeline.drug_name %></td>
+            <td><%= pipeline.indication %></td>
+            <td><%= pipeline.mechanism %></td>
+            <td><%= pipeline.phase %></td>
           </tr>
        <% }) %>
       </tbody>
