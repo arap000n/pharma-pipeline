@@ -138,3 +138,8 @@ header{
 .footer-list li {
   padding-bottom: 20px;
 }
+
+.tablesorter{
+  margin:auto;
+  text-align:center;
+}
