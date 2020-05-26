@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     'SELECT * FROM drug',
     (error, results) => {
       res.render('pages/index',{drugs: results});
-    }
+    })
 })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
