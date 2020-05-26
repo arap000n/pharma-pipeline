@@ -146,8 +146,12 @@ header{
 }
 
 th,td{
-  width:100px;
+  width:150px;
   height:50px;
   border-bottom: 1px white solid;
   text-align:center;
+}
+
+th{
+  font-weight:bold;
 }
