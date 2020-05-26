@@ -143,3 +143,8 @@ header{
   margin:auto;
   text-align:center;
 }
+
+.th .td{
+  width:40px;
+  height:20px
+}
