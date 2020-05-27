@@ -108,8 +108,8 @@ header{
 }
 
 .pipeline-content{
-  background-color: #008080;
-  color: white;
+  background-color:white ;
+  color: #008080;
   padding:50px 0px 80px 0px;
   text-align:center;
   height:2000px;
