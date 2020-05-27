@@ -159,7 +159,7 @@ header{
 th,td{
   width:250px;
   height:50px;
-  border-bottom: 1px white solid;
+  border-bottom: 1px #008080 solid;
   text-align:center;
 }
 
