@@ -159,10 +159,15 @@ header{
 th,td{
   width:250px;
   height:50px;
-  border-bottom: 1px #008080 solid;
+  border-bottom: 2px #008080 solid;
+  text-align:center;
+  font-weight:bold;
+}
+
+td{
+  width:250px;
+  height:50px;
+  border-bottom: 1px #008080 dotted;
   text-align:center;
 }
 
-th{
-  font-weight:bold;
-}
