@@ -79,6 +79,7 @@ header{
 .message-title{
   margin-top:200px;
   font-size:52px;
+  letter-spacing:0.2em;
 }
 
 .news-content{
