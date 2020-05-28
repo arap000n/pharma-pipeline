@@ -17,6 +17,16 @@ a {
   text-decoration: none;
 }
 
+#myTable .tablesorter-header {
+  cursor: pointer;
+  outline: none;
+}
+#myTable .tablesorter-header-inner::after { 
+  content: '▼';
+  font-size: 12px;
+  margin-left: 5px;
+}
+
 header{
   background-color:rgba(0,0,0,0.7);
   height:90px;
