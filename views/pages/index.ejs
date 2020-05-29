@@ -74,9 +74,7 @@
 	          <th>フェーズ</th>
 	        </tr>
 	      </thead>
-	      <tbody>
 	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
-	      </tbody>
 	     </table>
 	     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
 	  </div>
@@ -111,7 +109,7 @@
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
-          $('#pipeline-all-contents').html('<p>テスト</p>');
+          $('#pipeline-all-contents').html('<tbody><tr><td>テスト</td><td>テスト</td><td>テスト</td><td>テスト</td><td>テスト</td><td>テスト</td><td>テスト</td></tr></p></tbody>');
         }
       });
     });
