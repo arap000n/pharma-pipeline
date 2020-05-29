@@ -94,9 +94,10 @@
 
   <script>
   let html="";
+  let pipelines=<% pipelines %>;
     $(function() {
       $('#pipeline-all-pager').pagination({
-        dataSource:<% pipelines %>,
+        dataSource:pipelines,
         pageSize: 5,
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
