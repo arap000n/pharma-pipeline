@@ -92,19 +92,6 @@
 	      </div>
 	</div>
 
-	<% pipelines.forEach((pipeline) => { %>
-          <td><%= pipeline.company_name %></td>
-          <td><%= pipeline.dev_code %></td>
-          <td><%= pipeline.generic_name %></td>
-          <td><%= pipeline.drug_name %></td>
-          <td><%= pipeline.indication %></td>
-          <td><%= pipeline.mechanism %></td>
-          <td><%= pipeline.phase %></td>
-          
-    <% }) %>
-
-
-
   <script>
   let html="";
     $(function() {
@@ -127,7 +114,8 @@
         callback: function(data, pagination) {
           $('#pipeline-all-contents').html(
           	data.forEach((pipeline)=> {
-            '<tr>'
+            html=html+
+            	'<tr>'
 		        + '<td>' + pipeline.company_name + '</td>'
 		        + '<td>' + pipeline.dev_code + '</td>'
 		        + '<td>' + pipeline.generic_name + '</td>'
