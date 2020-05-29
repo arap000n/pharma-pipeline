@@ -124,7 +124,7 @@ header{
 }
 
 .search-q{
-  width:625px;
+  width:645px;
   height:60px;
 }
 
@@ -134,7 +134,6 @@ header{
   width:125px;
   text-align:center;
   vertical-align: middle;
-  margin-right:0px;
   border-left: solid 3px #008080;
 }
 
@@ -142,13 +141,14 @@ header{
   width:500px;
   height:40px;
   margin:20px 0px 0px 20px;
+  border-radius:10px; 
 }
 
 .search-submit{
  width:300px;
  background-color: #008080;
  color:white;
- box-shadow: 0 5px 10px 0 #006363;
+ box-shadow: 0 2px 5px 0 #006363;
  border-radius:5px;
  height:40px;
  margin-top:20px;
