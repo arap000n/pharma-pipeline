@@ -23,8 +23,8 @@ express()
   })
   .get('/search', (req, res) => {
     connection.query(
-      'SELECT  company.company_name, drug.dev_code, drug.generic_name, drug.drug_name, pipeline.indication, drug.mechanism, pipeline.phase FROM pipeline LEFT JOIN company ON company.company_id=pipeline.company_id LEFT JOIN drug ON drug.drug_id=pipeline.drug_id WHERE company.company_name LIKE ? OR pipeline.indication LIKE ?',
-      [req.params.cn,req.params.indi],
+      'SELECT  company.company_name, drug.dev_code, drug.generic_name, drug.drug_name, pipeline.indication, drug.mechanism, pipeline.phase FROM pipeline LEFT JOIN company ON company.company_id=pipeline.company_id LEFT JOIN drug ON drug.drug_id=pipeline.drug_id WHERE company.company_name LIKE '%中外%' OR pipeline.indication LIKE '%がん%'',
+      //[req.params.cn,req.params.indi],
       (error, results) => {
         res.render('pages/index',{pipelines: results});
       })
