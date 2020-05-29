@@ -125,6 +125,7 @@ header{
 
 .search-input{
   width:500px;
+  height:100px;
 }
 
 .search-submit{
@@ -132,7 +133,8 @@ header{
  background-color: #008080;
  color:white;
  box-shadow: 0 10px 25px 0 #008080;
- border-radius:5px; 
+ border-radius:5px;
+ height:100px;
 }
 
 .search-q{
