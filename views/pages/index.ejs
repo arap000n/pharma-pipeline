@@ -112,7 +112,7 @@
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
           $('#pipeline-all-contents').html(
-		data.map((pipeline)=> {
+		data.map(function(pipeline) {
 			return
             		'<tr>'
 		        + '<td>' + pipeline.company_name + '</td>'
@@ -123,6 +123,7 @@
 		        + '<td>' + pipeline.mechanism + '</td>'
 		        + '<td>' + pipeline.phase + '</td>'
 		        + '</tr>';
+			console.log(pipeline.company_name);
       		}));
         }
       });
