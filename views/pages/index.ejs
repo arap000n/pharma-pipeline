@@ -98,13 +98,13 @@
       $('#pipeline-all-pager').pagination({
         dataSource:[
 			<% pipelines.forEach((pipeline) => { %>
-				{company_name:<%= pipeline.company_name %>,
-				dev_code:<%= pipeline.dev_code %>,
-				generic_name:<%= pipeline.generic_name %>,
-				drug_name:<%= pipeline.drug_name %>,
-				indication:<%= pipeline.indication %>,
-				mechanism:<%= pipeline.mechanism %>,
-				phase:<%= pipeline.phase %>},
+				{company_name:"<%= pipeline.company_name %>",
+				dev_code:"<%= pipeline.dev_code %>",
+				generic_name:"<%= pipeline.generic_name %>",
+				drug_name:"<%= pipeline.drug_name %>",
+				indication:"<%= pipeline.indication %>",
+				mechanism:"<%= pipeline.mechanism %>",
+				phase:"<%= pipeline.phase %>}",
 			<% }) %>
 
         ],
