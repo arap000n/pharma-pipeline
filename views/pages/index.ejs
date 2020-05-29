@@ -21,10 +21,14 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></script>
   
-  <!-- tablesorter -->
+  <!-- tablesorter.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
   <script type="text/javascript" src="tablesorter.js"></script>
+  
+  <!-- Pagination.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+  
   
 </head>
 
@@ -73,21 +77,47 @@
         </tr>
       </thead>
       <tbody>
-       <% pipelines.forEach((pipeline) => { %>
           <tr>
-            <td><%= pipeline.company_name %></td>
-            <td><%= pipeline.dev_code %></td>
-            <td><%= pipeline.generic_name %></td>
-            <td><%= pipeline.drug_name %></td>
-            <td><%= pipeline.indication %></td>
-            <td><%= pipeline.mechanism %></td>
-            <td><%= pipeline.phase %></td>
+	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
           </tr>
-       <% }) %>
       </tbody>
      </table>
+     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
   </div>
 </div>
+
+
+<script>
+
+    // [2] pagination.jsの設定
+    $(function() {
+      $('#pipeline-all-pager').pagination({ // pipeline-all-pagerにページャーを埋め込む
+        dataSource: pipelines,
+        pageSize: 10, // 1ページあたりの表示数
+        prevText: '&lt; 前へ',
+        nextText: '次へ &gt;',
+        // ページがめくられた時に呼ばれる
+        callback: function(data, pagination) {
+          // dataの中に次に表示すべきデータが入っているので、html要素に変換
+          $('#pipeline-all-contents').html(template(data)); // pipeline-all-contentsにコンテンツを埋め込む
+        }
+      });
+    });
+
+    // [3] データ1つ1つをhtml要素に変換する
+    function template(dataArray) {
+      return dataArray.map(function(data) {
+        return 
+        '<td>' + data.company_name + '</td>'
+        + '<td>' + data.dev_code + '</td>'
+        + '<td>' + data.generic_name + '</td>'
+        + '<td>' + data.drug_name + '</td>'
+        + '<td>' + data.indication + '</td>'
+        + '<td>' + data.mechanism + '</td>'
+        + '<td>' + data.phase + '</td>'
+      })
+    }
+</script>
 
 
 <div class="footer">
