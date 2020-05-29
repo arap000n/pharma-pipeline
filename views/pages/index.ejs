@@ -78,6 +78,7 @@
 	</div>
 
   <script>
+  let html="";
     $(function() {
       $('#pipeline-all-pager').pagination({
         dataSource:[
@@ -96,6 +97,20 @@
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
+		
+		data.forEach((pipeline) => {
+          			html=html+
+				'<tr>'+
+            			'<td>'+pipeline.company_name+'</td>'+
+				'<td>'+pipeline.dev_code+'</td>'+
+				'<td>'+pipeline.generic_name+'</td>'+
+				'<td>'+pipeline.drug_name+'</td>'+
+				'<td>'+pipeline.indication+'</td>'+
+				'<td>'+pipeline.mechanism+'</td>'+
+				'<td>'+pipeline.phase+'</td>'+
+				'</tr>'
+			 });
+		
           $('#pipeline-all-contents').html(
 		'<table class="tablesorter" id="myTable">'+
 	  		'<thead>'+
@@ -110,17 +125,7 @@
 				'</tr>'+
 			'</thead>'+
 			'<tbody>'+
-			data.forEach((pipeline) => {
-          			'<tr>'+
-            			'<td>'+pipeline.company_name+'</td>'+
-				'<td>'+pipeline.dev_code+'</td>'+
-				'<td>'+pipeline.generic_name+'</td>'+
-				'<td>'+pipeline.drug_name+'</td>'+
-				'<td>'+pipeline.indication+'</td>'+
-				'<td>'+pipeline.mechanism+'</td>'+
-				'<td>'+pipeline.phase+'</td>'+
-				'</tr>'
-			 })+			
+			html+			
 			'</tbody>'+
 		'</table>'
 	);
