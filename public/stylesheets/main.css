@@ -127,7 +127,8 @@ header{
   width:640px;
   height:60px;
   margin:auto;
-  padding:10px 10px;
+  padding:15px 0px;
+  font-size:30px;
 }
 
 .search-q label{
@@ -135,6 +136,7 @@ header{
   float:left;
   width:120px;
   height:40px;
+  padding:10px 0px;
   text-align:center;
   vertical-align: middle;
   border-left: solid 3px #008080;
