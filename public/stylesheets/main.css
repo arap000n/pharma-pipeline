@@ -124,15 +124,17 @@ header{
 }
 
 .search-q{
-  width:645px;
+  width:640px;
   height:60px;
   margin:auto;
+  padding:10px 10px;
 }
 
 .search-q label{
   display:inline-block;
   float:left;
-  width:125px;
+  width:120px;
+  height:40px;
   text-align:center;
   vertical-align: middle;
   border-left: solid 3px #008080;
@@ -141,7 +143,6 @@ header{
 .search-input{
   width:500px;
   height:40px;
-  margin:20px 0px 0px 20px;
   border-radius:10px; 
 }
 
