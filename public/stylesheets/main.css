@@ -123,6 +123,16 @@ header{
   border-bottom:1px solid rgb(105,105,105);
 }
 
+.search-input{
+  width:500px;
+}
+
+.search-submit{
+ width:600px;
+ background-color: #008080;
+ color:white;
+}
+
 .section-title{
   text-align:center;
   width:500px;
