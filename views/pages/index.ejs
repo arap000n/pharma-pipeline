@@ -109,9 +109,9 @@
   let html="";
     $(function() {
       $('#pipeline-all-pager').pagination({
-        dataSource:[{
+        dataSource:[
 			<% pipelines.forEach((pipeline) => { %>
-				company_name:<%= pipeline.company_name %>,
+				{company_name:<%= pipeline.company_name %>,
 				dev_code:<%= pipeline.dev_code %>,
 				generic_name:<%= pipeline.generic_name %>,
 				drug_name:<%= pipeline.drug_name %>,
