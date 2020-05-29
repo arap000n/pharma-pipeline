@@ -21,14 +21,10 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></script>
   
-  <!-- tablesorter.js -->
+  <!-- tablesorter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
   <script type="text/javascript" src="tablesorter.js"></script>
-  
-  <!-- Pagination.js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
-  
   
 </head>
 
@@ -77,31 +73,19 @@
         </tr>
       </thead>
       <tbody>
+       <% pipelines.forEach((pipeline) => { %>
           <tr>
-	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
-	      	<% $(function() { %>
-			  <% $('#pipeline-all-pager').pagination({   %>
-			    <% dataSource: pipelines, %>
-			    <% pageSize: 10,  %>
-			    <% prevText: '&lt; 前へ', %>
-			    <% nextText: '次へ &gt;', %>
-			   	<% callback: data.forEach((pipeline) => { %>
-			          <tr>
-			            <td><%= pipeline.company_name %></td>
-			            <td><%= pipeline.dev_code %></td>
-			            <td><%= pipeline.generic_name %></td>
-			            <td><%= pipeline.drug_name %></td>
-			            <td><%= pipeline.indication %></td>
-			            <td><%= pipeline.mechanism %></td>
-			            <td><%= pipeline.phase %></td>
-			          </tr>
-			       <% }) %>
-				<% }); %>
-			<% }); %>
-        </tr>
+            <td><%= pipeline.company_name %></td>
+            <td><%= pipeline.dev_code %></td>
+            <td><%= pipeline.generic_name %></td>
+            <td><%= pipeline.drug_name %></td>
+            <td><%= pipeline.indication %></td>
+            <td><%= pipeline.mechanism %></td>
+            <td><%= pipeline.phase %></td>
+          </tr>
+       <% }) %>
       </tbody>
      </table>
-     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
   </div>
 </div>
 
