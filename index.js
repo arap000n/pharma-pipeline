@@ -23,7 +23,7 @@ express()
   })
   .get('/search', (req, res) => {
     connection.query(
-      'SELECT  company.company_name, drug.dev_code, drug.generic_name, drug.drug_name, pipeline.indication, drug.mechanism, pipeline.phase FROM pipeline LEFT JOIN company ON company.company_id=pipeline.company_id LEFT JOIN drug ON drug.drug_id=pipeline.drug_id WHERE company.company_name LIKE'+ connection.escape('%' + req.query.cn + '%')+'AND pipeline.indication LIKE'+ connection.escape('%' + req.query.indi + '%'),
+      'SELECT  company.company_name, drug.dev_code, drug.generic_name, drug.drug_name, pipeline.indication, drug.mechanism, pipeline.phase FROM pipeline LEFT JOIN company ON company.company_id=pipeline.company_id LEFT JOIN drug ON drug.drug_id=pipeline.drug_id WHERE company.company_name LIKE'+ connection.escape('%' + req.query.cn + '%')+'OR pipeline.indication LIKE'+ connection.escape('%' + req.query.indi + '%'),
       (error, results) => {
         res.render('pages/index',{pipelines: results});
       })
