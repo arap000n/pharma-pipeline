@@ -17,6 +17,35 @@ a {
   text-decoration: none;
 }
 
+/* Pagination */
+
+.paginationjs-pages > ul > li > a {
+  padding: 6px 18px;
+  color: white;
+  background-color: lightgreen;
+  border: 1px solid darkcyan;
+}
+.paginationjs-pages > ul > li > a:hover {
+  color: #008080;
+  background-color: white;
+}
+.paginationjs-pages > ul > li.active > a {
+  color: white;
+  background-color: #008080;
+}
+.paginationjs-pages > ul > li.disabled > a {
+  color: #008080;
+  background-color: white;
+}
+.paginationjs-prev {
+  margin: 0 16px 0 0;
+}
+.paginationjs-next {
+  margin: 0 0 0 16px;
+}
+
+/* tablesorter */
+
 #myTable .tablesorter-header {
   cursor: pointer;
   outline: none;
@@ -26,6 +55,8 @@ a {
   font-size: 12px;
   margin-left: 5px;
 }
+
+/* 本体 */
 
 header{
   background-color:rgba(0,0,0,0.7);
