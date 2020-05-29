@@ -131,6 +131,12 @@ header{
  width:600px;
  background-color: #008080;
  color:white;
+ box-shadow: 0 10px 25px 0 #008080;
+ border-radius:5px; 
+}
+
+.search-q{
+  float:left;
 }
 
 .section-title{
