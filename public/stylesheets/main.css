@@ -130,6 +130,7 @@ header{
   text-align:center;
   vertical-align: middle;
   margin-right:0px;
+  border-left: solid 3px #008080;
 }
 
 .search-input{
