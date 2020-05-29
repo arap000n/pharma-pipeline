@@ -8,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-114339249-5');
   </script>
 
@@ -17,88 +16,109 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- 
+
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></script>
- 
-  <!-- tablesorter -->
+
+  <!-- tablesorter.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
   <script type="text/javascript" src="tablesorter.js"></script>
- 
+
+  <!-- Pagination.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
 </head>
 
 <body>
 
-<header>
-  <div class="header-logo"><a href="/">PIPELINE.COM</a></div>
-  <div class="header-list">
-    <ul>
-      <li><a href="#n">最新ニュース</a></li>
-      <li><a href="#p">開発パイプライン</a></li>
-      <li><a href="https://forms.gle/Q3vWcpqCkTEe4wZM9">お問い合わせ</a></li>
-    </ul>
-  </div>
-</header>
+	<header>
+	  <div class="header-logo"><a href="/">PIPELINE.COM</a></div>
+	  <div class="header-list">
+	    <ul>
+	      <li><a href="#n">最新ニュース</a></li>
+	      <li><a href="#p">開発パイプライン</a></li>
+	      <li><a href="https://forms.gle/Q3vWcpqCkTEe4wZM9">お問い合わせ</a></li>
+	    </ul>
+	  </div>
+	</header>
 
-<div class="message-content" id="m">
-  <div class="container">
-    <h1 class="message-title">PIPELINE.COM</h1>
-    <p>国内の新薬の開発パイプラインと関連情報を見やすくまとめています</p>
-    <input type="text" class="search">
-    <a type="button" class="search-btn">検索</a>
-  </div>
-</div>
+	<div class="message-content" id="m">
+	  <div class="container">
+	    <h1 class="message-title">PIPELINE.COM</h1>
+	    <p>国内の新薬の開発パイプラインと関連情報を見やすくまとめています</p>
+	    <input type="text" class="search">
+	    <a type="button" class="search-btn">検索</a>
+	  </div>
+	</div>
 
-<div class="news-content" id="n">
-  <div class="container">
-    <h2 class="section-title">最新ニュース</h2>
-    <div class="news-display"></div>
-  </div>
-</div>
+	<div class="news-content" id="n">
+	  <div class="container">
+	    <h2 class="section-title">最新ニュース</h2>
+	    <div class="news-display"></div>
+	  </div>
+	</div>
 
-<div class="pipeline-content" id="p">
-  <div class="container">
-    <h2 class="section-title">開発パイプライン情報</h2>
-    <table class="tablesorter" id="myTable">
-      <thead>
-        <tr>
-          <th>会社名</th>
-          <th>開発コード</th>
-          <th>一般名</th>
-          <th>製品名</th>
-          <th>対象疾患</th>
-          <th>作用機序</th>
-          <th>フェーズ</th>
-        </tr>
-      </thead>
-      <tbody>
-       <% pipelines.forEach((pipeline) => { %>
-          <tr>
-            <td><%= pipeline.company_name %></td>
-            <td><%= pipeline.dev_code %></td>
-            <td><%= pipeline.generic_name %></td>
-            <td><%= pipeline.drug_name %></td>
-            <td><%= pipeline.indication %></td>
-            <td><%= pipeline.mechanism %></td>
-            <td><%= pipeline.phase %></td>
-          </tr>
-       <% }) %>
-      </tbody>
-     </table>
-  </div>
-</div>
+	<div class="pipeline-content" id="p">
+	  <div class="container">
+	    <h2 class="section-title">開発パイプライン情報</h2>
+	    <table class="tablesorter" id="myTable">
+	      <thead>
+	        <tr>
+	          <th>会社名</th>
+	          <th>開発コード</th>
+	          <th>一般名</th>
+	          <th>製品名</th>
+	          <th>対象疾患</th>
+	          <th>作用機序</th>
+	          <th>フェーズ</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
+	      </tbody>
+	     </table>
+	     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
+	  </div>
+	</div>
+
+	<div class="footer">
+	      <div class="footer-logo">PIPELINE.COM</div>
+	      <div class="footer-list">
+	        <ul>
+	          <li>ポリシー</li>
+	          <li><a href="https://forms.gle/Q3vWcpqCkTEe4wZM9">お問い合わせ</a></li>
+	        </ul>
+	      </div>
+	</div>
+
+  <script>
+  let html="";
+    $(function() {
+      $('#pipeline-all-pager').pagination({
+        dataSource:<% pipelines %>,
+        pageSize: 5,
+        prevText: '&lt; 前へ',
+        nextText: '次へ &gt;',
+        callback: function(data, pagination) {
+          $('#pipeline-all-contents').html(
+          	data.forEach((pipeline)=> {
+            '<tr>'
+		        + '<td>' + pipeline.company_name + '</td>'
+		        + '<td>' + pipeline.dev_code + '</td>'
+		        + '<td>' + pipeline.generic_name + '</td>'
+		        + '<td>' + pipeline.drug_name + '</td>'
+		        + '<td>' + pipeline.indication + '</td>'
+		        + '<td>' + pipeline.mechanism + '</td>'
+		        + '<td>' + pipeline.phase + '</td>'
+		        + '</tr>';
+		      }));
+        }
+      });
+    });
+  </script>
 
 
-<div class="footer">
-      <div class="footer-logo">PIPELINE.COM</div>
-      <div class="footer-list">
-        <ul>
-          <li>ポリシー</li>
-          <li><a href="https://forms.gle/Q3vWcpqCkTEe4wZM9">お問い合わせ</a></li>
-        </ul>
-      </div>
-    </div>
 
 </body>
 </html>
