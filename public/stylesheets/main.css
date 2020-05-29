@@ -143,14 +143,13 @@ header{
 .search-input{
   width:500px;
   height:40px;
-  border-radius:10px; 
+  border-radius:5px; 
 }
 
 .search-submit{
  width:300px;
  background-color: #008080;
  color:white;
- box-shadow: 0 2px 5px 0 #006363;
  border-radius:5px;
  height:40px;
  margin-top:20px;
