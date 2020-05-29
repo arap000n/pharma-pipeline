@@ -112,8 +112,9 @@
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
           $('#pipeline-all-contents').html(
-          	data.forEach((pipeline)=> {
-	    	return
+		return
+		data.map((pipeline)=> {
+			return
             		'<tr>'
 		        + '<td>' + pipeline.company_name + '</td>'
 		        + '<td>' + pipeline.dev_code + '</td>'
