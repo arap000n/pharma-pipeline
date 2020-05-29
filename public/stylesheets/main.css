@@ -126,6 +126,7 @@ header{
 .search-input{
   width:500px;
   height:40px;
+  margin-top:20px;
 }
 
 .search-submit{
@@ -135,10 +136,15 @@ header{
  box-shadow: 0 5px 10px 0 #006363;
  border-radius:5px;
  height:40px;
+ margin-top:20px;
 }
 
-.search-q p{
+.search-q label{
+  display:inline-block;
   float:left;
+  width:50px;
+  text-align:center;
+  vertical-align: middle;
 }
 
 .section-title{
