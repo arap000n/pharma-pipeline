@@ -126,6 +126,7 @@ header{
 .search-q{
   width:645px;
   height:60px;
+  margin:auto;
 }
 
 .search-q label{
