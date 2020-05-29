@@ -96,7 +96,32 @@
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
-          $('#pipeline-all-contents').html('<p>テスト</p>');
+          $('#pipeline-all-contents').html(
+	  '<table class="tablesorter" id="myTable">\
+	      <thead>\
+	        <tr>\
+	          <th>会社名</th>\
+	          <th>開発コード</th>\
+	          <th>一般名</th>\
+	          <th>製品名</th>\
+	          <th>対象疾患</th>\
+	          <th>作用機序</th>\
+	          <th>フェーズ</th>\
+	        </tr>\
+	      </thead>\
+	      <tbody>\
+	      	<tr>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+			<td>テスト</td>\
+		</tr>\
+		</tbody>\
+	</table>'\
+	);
         }
       });
     });
