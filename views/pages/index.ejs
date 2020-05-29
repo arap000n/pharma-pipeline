@@ -76,6 +76,24 @@
 	      </thead>
 	      <tbody>
 	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
+	      	<% $(function() { %>
+				<% $('#pipeline-all-pager').pagination({ %>
+					<% dataSource: pipelines, %>
+					<% pageSize: 5, %>
+					<% prevText: '&lt; 前へ', %>
+					<% nextText: '次へ &gt;', %>
+					<% callback: function(data, pagination) { %>
+					<% data.forEach((pipeline)=> { %>
+					<tr>
+					<td><%= pipeline.company_name %></td>
+					<td><%= pipeline.dev_code %></td>
+					<td><%= pipeline.generic_name %></td>
+					<td><%= pipeline.drug_name %></td>
+					<td><%= pipeline.indication %></td>
+					<td><%= pipeline.mechanism %></td>
+					<td><%= pipeline.phase %></td>
+					</tr>
+				<% })}}) %>
 	      </tbody>
 	     </table>
 	     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
