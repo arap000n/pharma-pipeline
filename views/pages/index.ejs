@@ -55,9 +55,7 @@
 	<div class="news-content" id="n">
 	  <div class="container">
 	    <h2 class="section-title">最新ニュース</h2>
-	    <div class="news-display">
-	    <P> <%= pipelines %> </p>
-	    </div>
+	    <div class="news-display"></div>
 	  </div>
 	</div>
 
@@ -94,12 +92,35 @@
 	      </div>
 	</div>
 
+	<% pipelines.forEach((pipeline) => { %>
+          <td><%= pipeline.company_name %></td>
+          <td><%= pipeline.dev_code %></td>
+          <td><%= pipeline.generic_name %></td>
+          <td><%= pipeline.drug_name %></td>
+          <td><%= pipeline.indication %></td>
+          <td><%= pipeline.mechanism %></td>
+          <td><%= pipeline.phase %></td>
+          
+    <% }) %>
+
+
+
   <script>
   let html="";
-  let pipelines=<%= pipelines %>;
     $(function() {
       $('#pipeline-all-pager').pagination({
-        dataSource:pipelines,
+        dataSource:[{
+			<% pipelines.forEach((pipeline) => { %>
+				company_name:<%= pipeline.company_name %>,
+				dev_code:<%= pipeline.dev_code %>,
+				generic_name:<%= pipeline.generic_name %>,
+				drug_name:<%= pipeline.drug_name %>,
+				indication:<%= pipeline.indication %>,
+				mechanism:<%= pipeline.mechanism %>,
+				phase:<%= pipeline.phase %>},
+			<% }) %>
+
+        ],
         pageSize: 5,
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
