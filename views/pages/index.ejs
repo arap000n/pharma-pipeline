@@ -93,10 +93,11 @@
 	</div>
 
   <script>
-    let html="";
+  let pipelineArray = pipelines;
+  let html="";
     $(function() {
       $('#pipeline-all-pager').pagination({
-        dataSource: pipelines,
+        dataSource: pipelineArray,
         pageSize: 5,
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
