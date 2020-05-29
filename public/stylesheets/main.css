@@ -21,9 +21,9 @@ a {
 
 .paginationjs-pages > ul > li > a {
   padding: 6px 18px;
-  color: white;
-  background-color: lightgreen;
-  border: 1px solid darkcyan;
+  color: #008080;
+  background-color: white;
+  border: 1px solid #008080;
 }
 .paginationjs-pages > ul > li > a:hover {
   color: #008080;
