@@ -65,12 +65,12 @@
 	    <div class="search-container">
 	    	<form action="/search" method="get">
 			<div class="search-q">
-				<p>会社名: </p>
-				<input class="search-input" type="text" name="cn">
+				<label for="company">会社名で検索: </label>
+				<input class="search-input" type="text" name="cn" id="company">
 			</div>
 			<div class="search-q">
-				<p>対象疾患: </p>
-				<input class="search-input" type="text" name="ind">
+				<label for="desease">対象疾患で検索: </label>
+				<input class="search-input" type="text" name="ind" id="desease">
             		</div>
 			<input class="search-submit" type="submit" value="検索">
 		</form>
