@@ -62,7 +62,17 @@
 	<div class="search-display" id="n">
 	  <div class="container">
 	    <h2 class="section-title">詳細検索</h2>
-	    <div class="search-container"></div>
+	    <div class="search-container">
+	    	<form action="/search" method="get">
+			<p>会社名: </p>
+			<input type="text" name="company_name">
+			<p>適応疾患: </p>
+			<input type="text" name="indecation">
+            		<p>キーワード: </p>
+	                <input type="text" name="keyword">
+            		<input type="submit" value="検索">
+		</form>
+	    </div>
 	  </div>
 	</div>
 
