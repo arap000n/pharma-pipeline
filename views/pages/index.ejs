@@ -93,7 +93,6 @@
 	</div>
 
   <script>
-  let html="";
     $(function() {
       $('#pipeline-all-pager').pagination({
         dataSource:[
@@ -114,8 +113,8 @@
         callback: function(data, pagination) {
           $('#pipeline-all-contents').html(
           	data.forEach((pipeline)=> {
-            html=html+
-            	'<tr>'
+	    	return
+            		'<tr>'
 		        + '<td>' + pipeline.company_name + '</td>'
 		        + '<td>' + pipeline.dev_code + '</td>'
 		        + '<td>' + pipeline.generic_name + '</td>'
@@ -124,7 +123,7 @@
 		        + '<td>' + pipeline.mechanism + '</td>'
 		        + '<td>' + pipeline.phase + '</td>'
 		        + '</tr>';
-		      }));
+      		}));
         }
       });
     });
