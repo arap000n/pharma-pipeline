@@ -8,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-114339249-5');
   </script>
 
@@ -17,18 +16,18 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  
+
   <!-- jQuery -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></script>
-  
+
   <!-- tablesorter.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
   <script type="text/javascript" src="tablesorter.js"></script>
-  
+
   <!-- Pagination.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
-  
+
 </head>
 
 <body>
@@ -82,7 +81,7 @@
 	     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
 	  </div>
 	</div>
-	
+
 	<div class="footer">
 	      <div class="footer-logo">PIPELINE.COM</div>
 	      <div class="footer-list">
@@ -95,7 +94,7 @@
 
   <script>
     $(function() {
-      $('#pipeline-all-pager').pagination({ 
+      $('#pipeline-all-pager').pagination({
         dataSource: pipelines,
         pageSize: 5,
         prevText: '&lt; 前へ',
@@ -103,7 +102,8 @@
         callback: function(data, pagination) {
           $('#pipeline-all-contents').html(
           	data.forEach((pipeline)=> {
-		        '<tr>'
+            return
+            '<tr>'
 		        + '<td>' + pipeline.company_name + '</td>'
 		        + '<td>' + pipeline.dev_code + '</td>'
 		        + '<td>' + pipeline.generic_name + '</td>'
