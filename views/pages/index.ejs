@@ -111,20 +111,7 @@
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         callback: function(data, pagination) {
-          $('#pipeline-all-contents').html(
-		data.map(function(pipeline) {
-			return
-            		'<tr>'
-		        + '<td>' + pipeline.company_name + '</td>'
-		        + '<td>' + pipeline.dev_code + '</td>'
-		        + '<td>' + pipeline.generic_name + '</td>'
-		        + '<td>' + pipeline.drug_name + '</td>'
-		        + '<td>' + pipeline.indication + '</td>'
-		        + '<td>' + pipeline.mechanism + '</td>'
-		        + '<td>' + pipeline.phase + '</td>'
-		        + '</tr>';
-			console.log(pipeline.company_name);
-      		}));
+          $('#pipeline-all-contents').html('<p>テスト</p>);
         }
       });
     });
