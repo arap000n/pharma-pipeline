@@ -79,7 +79,8 @@
 
 	<div class="pipeline-content" id="p">
 	  <div class="container">
-	    <!--　<h2 class="section-title">開発パイプライン情報</h2>　-->	  
+	    <!--　<h2 class="section-title">開発パイプライン情報</h2>　-->	
+	    	<div id="search-condition"></div><!-- 検索条件のコンテンツ埋め込み -->
 	      	<div id="pipeline-all-contents"></div><!-- pagination.jsのコンテンツ埋め込み -->
 	     <div class="pager" id="pipeline-all-pager"></div><!-- pagination.jsのページ部分 -->
 	  </div>
@@ -94,6 +95,29 @@
 	        </ul>
 	      </div>
 	</div>
+
+<!-- 検索条件出力処理-->
+<script>
+	let queryString = window.location.search;
+	let queryObject = new Object();
+	if(queryString){
+	  queryString = queryString.substring(1);
+	  let parameters = queryString.split('&');
+
+	  for (var i = 0; i < parameters.length; i++) {
+	    let element = parameters[i].split('=');
+
+	    let paramName = decodeURIComponent(element[0]);
+	    let paramValue = decodeURIComponent(element[1]);
+
+	    queryObject[paramName] = paramValue;
+	    
+	  }
+	  
+	  $('#search-condition').html('<h2>会社名:'+queryObject[cn]+' 対象疾患:'+queryObject[ind]+'の検索結果</h2>');
+	  
+	}
+</script>
 
 <!-- ページネーション処理-->
   <script>
