@@ -100,6 +100,8 @@
 <script>
 	let queryString = window.location.search;
 	let queryObject = new Object();
+	let html=""
+	
 	if(queryString){
 	  queryString = queryString.substring(1);
 	  let parameters = queryString.split('&');
@@ -110,11 +112,11 @@
 	    let paramName = decodeURIComponent(element[0]);
 	    let paramValue = decodeURIComponent(element[1]);
 
-	    queryObject[paramName] = paramValue;
+	    html = html +paramValue+' ';
 	    
 	  }
 	  
-	  $('#search-condition').html('<h2>会社名:'+queryObject[cn]+' 対象疾患:'+queryObject[ind]+'の検索結果</h2>');
+	  $('#search-condition').html('<h2>'+html+'の検索結果</h2>');
 	  
 	}
 </script>
