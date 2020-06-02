@@ -3,7 +3,7 @@ const path = require('path')
 const mysql = require('mysql');
 const PORT = process.env.PORT || 5000
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
   host: "us-cdbr-east-05.cleardb.net",
   user: "b9b886717a0254",
   password: "84f508e2",
