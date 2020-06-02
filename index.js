@@ -10,6 +10,35 @@ const connection = mysql.createConnection({
   database: "heroku_0edb62883326224"
 });
 
+let reconnection;
+
+function handleDisconnect() {
+    console.log('INFO.CONNECTION_DB: ');
+    reconnection = mysql.createConnection(connection);
+    
+    //connection取得
+    reconnection.connect(function(err) {
+        if (err) {
+            console.log('ERROR.CONNECTION_DB: ', err);
+            setTimeout(handleDisconnect, 1000);
+        }
+    });
+    
+    //error('PROTOCOL_CONNECTION_LOST')時に再接続
+    reconnection.on('error', function(err) {
+        console.log('ERROR.DB: ', err);
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            console.log('ERROR.CONNECTION_LOST: ', err);
+            handleDisconnect();
+        } else {
+            throw err;
+        }
+    });
+}
+
+handleDisconnect();
+
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
