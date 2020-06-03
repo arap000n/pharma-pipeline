@@ -44,6 +44,7 @@ a {
   margin: 0 0 0 16px;
 }
 
+
 /* tablesorter */
 
 #myTable .tablesorter-header {
@@ -54,6 +55,11 @@ a {
   content: '▼';
   font-size: 12px;
   margin-left: 5px;
+}
+
+
+.google-form{
+  margin:auto;
 }
 
 /* 本体 */
